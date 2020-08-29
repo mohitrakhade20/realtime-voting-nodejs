@@ -6,7 +6,7 @@ const Vote = require("../models/Vote");
 
 const Pusher = require("pusher");
 
-const keys = require("../config/keys");
+// const keys = require("../config/keys");
 
 var pusher = new Pusher({
   appId: keys.pusherAppId,
