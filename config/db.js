@@ -5,6 +5,10 @@ const keys = require("./keys");
 mongoose.Promise = global.Promise;
 // Mongoose Connect
 mongoose
-  .connect(keys.mongoURI)
+  .connect(keys.mongoURI,{
+    useUnifiedTopology: true,
+    useNewUrlParser: true ,
+    useFindAndModify:false
+  })
   .then(() => console.log("MongoDB Connected"))
   .catch((err) => console.log(err));

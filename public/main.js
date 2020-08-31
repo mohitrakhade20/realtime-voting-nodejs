@@ -22,6 +22,7 @@ form.addEventListener("submit", (e) => {
 fetch("http://localhost:3000/poll")
   .then((res) => res.json())
   .then((data) => {
+    console.log(data);
     const votes = data.votes;
     const totalVotes = votes.length;
     // Count vote points - acc/current

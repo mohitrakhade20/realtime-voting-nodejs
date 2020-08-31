@@ -15,12 +15,12 @@ app.use(express.static(path.join(__dirname, "public")));
 
 // Body parser middleware
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // Enable CORS
 app.use(cors());
 
-app.use("/poll", poll);
+app.use("/", poll);
 
 const port = 3000;
 
